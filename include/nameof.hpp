@@ -389,7 +389,7 @@ constexpr string_view pretty_name(string_view name, bool remove_suffix = true) n
     if (!((name[i - 1] >= '0' && name[i - 1] <= '9') ||
           (name[i - 1] >= 'a' && name[i - 1] <= 'z') ||
           (name[i - 1] >= 'A' && name[i - 1] <= 'Z') ||
-          (name[i - 1] == '_'))) {
+          (name[i - 1] == '_') || (name[i - 1] == ':'))) {
       name.remove_prefix(i);
       break;
     }
